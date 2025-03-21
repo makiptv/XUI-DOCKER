@@ -1,0 +1,17 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: CDNievas/heroku-action@v1.0 # This is the action
+        with:
+          heroku_email: "nasinikola2@gmail.com"
+          heroku_api_key: ${{HRKU-ce352897-6f64-4f7b-aef9-575c7c0f6db7}}
+          heroku_app_name: "xui-one"
